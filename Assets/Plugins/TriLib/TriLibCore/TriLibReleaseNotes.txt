@@ -1,0 +1,12 @@
+﻿2.1.8
+Changelog:
+-Added geometry groups and blend shape keys auto renaming.
+-Added FBX checkings to allow malformed files loading.
+-Added experimental DAE (Collada) loader. This feature must be enabled in the TriLib settings menu.
+-Fixed FBX binary key tangents reading.
+-Fixed FBX pivot issues.
+-Fixed FBX animation tangent issues.
+-Fixed FBX animation parsing issues.
+-Fixed gLTF duplicated animation curve binding name bug.
+-Memory usage improvements.
+-Performance improvements.

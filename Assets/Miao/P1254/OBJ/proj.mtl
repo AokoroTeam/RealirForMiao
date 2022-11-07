@@ -1,0 +1,4745 @@
+# Syntaxe :
+# 
+# Ka r g b            // Couleur ambiante
+# Kd r g b            // Couleur de diffusion
+# Ks r g b            // Couleur du spéculaire
+# Ke r g b            // Couleur émise
+# Ns s                // Coefficient spéculaire
+# d alpha             // Opacité
+# Tr alpha            // Transparence
+# illum mode          // Modèle d'illumination
+# sidedness mode      // Mode de représentation des surfaces : permet d'afficher les deux faces en spécifiant 'both'
+# LightworksMaterial  // Le numéro de référence du matériau Lightworks
+# 
+# Les déclarations suivantes pour l'utilisation de textures.
+# Placez les chemins entre "" si le chemin ou le nom de fichier contient des espaces.
+# map_Ka path                                      // Chemin vers la texture ambiante
+# map_Kd path                                      // Chemin vers la texture diffusion
+# map_Ks path                                      // Chemin vers la texture spéculaire
+# map_Ke path                                      // Chemin vers la texture émission
+# map_Ns path                                      // Chemin vers la texture de coefficient spéculaire
+# map_d path -useAlpha (yes|no) -invert (yes|no)   // Chemin vers la texture d'opacité; si l'image contient un canal alpha ajoutez '-useAlpha yes'; si le blanc de l'image correspond aux zones transparentes ajoutez '-invert yes'
+# bump path -type (height|normal)                  // Chemin vers la texture de relief; si l'image est de type heightmap ajoutez '-type height'; si l'image est de type normalmap ajoutez '-type normal'
+# refl path                                        // Chemin vers la texture de réflectivité
+# disp path                                        // Chemin vers la texture de micro-déplacement
+# decal path                                       // Chemin vers la texture decal
+
+
+newmtl material0
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat1_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material1
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat2_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material2
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat3_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material3
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat4_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material4
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat5_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material5
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat6_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material6
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat7_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material7
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat8_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material8
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material9
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat9_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material10
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat10_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material11
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat11_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material12
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material13
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material14
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat12_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material15
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material16
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat13_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material17
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat14_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material18
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat15_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material19
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat16_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material20
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material21
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat17_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material22
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat18_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material23
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material24
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat19_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material25
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material26
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat20_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material27
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat21_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material28
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat22_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material29
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material30
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat23_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material31
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat24_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material32
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat25_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material33
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material34
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat26_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material35
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material36
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat27_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material37
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat28_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material38
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat29_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material39
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material40
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat30_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material41
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat31_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material42
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat32_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material43
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material44
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat33_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material45
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat34_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material46
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat35_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material47
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat36_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material48
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material49
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat37_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material50
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat38_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material51
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat39_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material52
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material53
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat40_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material54
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material55
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat41_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material56
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat42_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material57
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat43_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material58
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material59
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat44_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material60
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat45_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material61
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat46_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material62
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material63
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat47_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material64
+Ka 0.2000 0.2000 0.2000
+Kd 0.0000 0.0000 0.0000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material65
+Ka 0.2000 0.2000 0.2000
+Kd 0.6000 0.5686 0.2118
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material66
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material67
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material68
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material69
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material70
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material71
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material72
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material73
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material74
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material75
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material76
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material77
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material78
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material79
+Ka 0.2000 0.2000 0.2000
+Kd 0.3922 0.4510 0.4510
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material80
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material81
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat48_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material82
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat49_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material83
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat50_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material84
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat51_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material85
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat52_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material86
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat53_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material87
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat54_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material88
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat55_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material89
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat56_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material90
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat57_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material91
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat58_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material92
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat59_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material93
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat60_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material94
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat61_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material95
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat62_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material96
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat63_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material97
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat64_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material98
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat65_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material99
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat66_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material100
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat67_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material101
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat68_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material102
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat69_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material103
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat70_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material104
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat71_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material105
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat72_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material106
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat73_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material107
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat74_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material108
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat75_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material109
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat76_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material110
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat77_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material111
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat78_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material112
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat79_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material113
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat80_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material114
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat81_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material116
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat82_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material117
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat83_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material119
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat84_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material120
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat85_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material122
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat86_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material123
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat87_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material125
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat88_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material126
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat89_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material128
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat90_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material129
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material130
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material131
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material132
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material133
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material134
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material135
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material136
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material137
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material139
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material140
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material141
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material142
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material143
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material145
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material146
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material147
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material148
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material149
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material150
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material151
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material152
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material153
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material156
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat91_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material157
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat92_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material158
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat93_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material159
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat94_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material161
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat95_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material162
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material163
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat96_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material164
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat97_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material165
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat98_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material166
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat99_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material167
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat100_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material168
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat101_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material169
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat102_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material170
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat103_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material171
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat104_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material172
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat105_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material173
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat106_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material174
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat107_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material175
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat108_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material176
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat109_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material177
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat110_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material178
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat111_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material179
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat112_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material180
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat113_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material181
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat114_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material182
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat115_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material183
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat116_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material184
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat117_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material185
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat118_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material186
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat119_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material187
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat120_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material188
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat121_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material189
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat122_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material190
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat123_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material191
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat124_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material192
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat125_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material193
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat126_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material194
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat127_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material195
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat128_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material196
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat129_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material197
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat130_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material198
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat131_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material199
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat132_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material200
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat133_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material201
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat134_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material202
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat135_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material203
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat136_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material204
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat137_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material205
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat138_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material206
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat139_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material207
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat140_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material208
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat141_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material209
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat142_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material210
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat143_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material211
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat144_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material212
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat145_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material213
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat146_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material214
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat147_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material215
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat148_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material216
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat149_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material217
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat150_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material218
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat151_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material219
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat152_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material220
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat153_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material221
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat154_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material222
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat155_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material223
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat156_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material224
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat157_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material225
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat158_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material226
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat159_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material227
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat160_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material228
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat161_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material229
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat162_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material230
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat163_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material231
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat164_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material232
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat165_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material233
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat166_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material234
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat167_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material235
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat168_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material236
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat169_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material237
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat170_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material239
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat171_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material240
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat172_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material241
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat173_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material242
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat174_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material243
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat175_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material244
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat176_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material245
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat177_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material246
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat178_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material247
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat179_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material248
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat180_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material249
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat181_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material250
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat182_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material251
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat183_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material252
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat184_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material253
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat185_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material254
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat186_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material255
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat187_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material256
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat188_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material257
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat189_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material258
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat190_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material259
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat191_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material260
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat192_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material261
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat193_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material262
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat194_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material263
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat195_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material264
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat196_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material265
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat197_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material266
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat198_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material267
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material268
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat199_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material269
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat200_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material270
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat201_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material271
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat202_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material272
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat203_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material273
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat204_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material274
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material275
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat205_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material276
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat206_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material277
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat207_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material278
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat208_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material279
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat209_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material280
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat210_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material281
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material282
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat211_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material283
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat212_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material284
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat213_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material285
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat214_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material286
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat215_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material287
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat216_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material288
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat217_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material289
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat218_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material290
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat219_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material291
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat220_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material292
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat221_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material293
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat222_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material294
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat223_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material295
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat224_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material296
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material297
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat225_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material298
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat226_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material299
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat227_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material300
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat228_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material301
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat229_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material302
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat230_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material303
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat231_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material304
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material305
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat232_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material306
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat233_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material307
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat234_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material308
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat235_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material309
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat236_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material310
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material311
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat237_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material312
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat238_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material313
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat239_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material314
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat240_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material315
+Ka 0.2000 0.2000 0.2000
+Kd 0.5882 0.5882 0.9412
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material316
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat241_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material317
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat242_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material318
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat243_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material319
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat244_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material320
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat245_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material321
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material322
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat246_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material323
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat247_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material324
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat248_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material325
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat249_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material326
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat250_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material327
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat251_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material328
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material329
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material331
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material332
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material333
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material336
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material337
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material338
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material339
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material342
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material343
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material345
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material346
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material347
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material348
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material349
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material351
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material353
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material354
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material355
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material356
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material357
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material358
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material359
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material360
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material361
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material362
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material363
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material364
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material365
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material366
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material368
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material369
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material371
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat252_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material372
+Ka 0.2000 0.2000 0.2000
+Kd 0.8000 0.8000 0.8000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material373
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat253_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material374
+Ka 0.2000 0.2000 0.2000
+Kd 0.8000 0.8000 0.8000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material375
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat254_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material376
+Ka 0.2000 0.2000 0.2000
+Kd 0.8000 0.8000 0.8000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material377
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat255_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material378
+Ka 0.2000 0.2000 0.2000
+Kd 0.8000 0.8000 0.8000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material379
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat256_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material380
+Ka 0.2000 0.2000 0.2000
+Kd 0.8000 0.8000 0.8000
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material381
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat257_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material382
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat258_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material383
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat259_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material384
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat260_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material385
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat261_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material386
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat262_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material387
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat263_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material388
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat264_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material389
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat265_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material390
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat266_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material391
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat267_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material392
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat268_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material393
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat269_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material394
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat270_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material395
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat271_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material396
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat272_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material397
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat273_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material398
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat274_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material399
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat275_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material400
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat276_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material401
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat277_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material402
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat278_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material403
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat279_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material404
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat280_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material405
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat281_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material406
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat282_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material407
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat283_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material408
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat284_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material409
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat285_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material410
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat286_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material411
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat287_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material412
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat288_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material413
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat289_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material414
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat290_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material415
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat291_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material416
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat292_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material417
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat293_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material418
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat294_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material419
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat295_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material420
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat296_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material421
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat297_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material422
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat298_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material423
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat299_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material424
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat300_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material425
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat301_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material426
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat302_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material427
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat303_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material428
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat304_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material429
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat305_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material430
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat306_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material431
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat307_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material432
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat308_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material433
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat309_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material434
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat310_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material435
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat311_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material436
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat312_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material437
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat313_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material438
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat314_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material439
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat315_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material440
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat316_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material441
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat317_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material442
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat318_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material443
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat319_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material444
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat320_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material445
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat321_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material446
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat322_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material447
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat323_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material448
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat324_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material449
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat325_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material450
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat326_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material451
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat327_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material452
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat328_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material453
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat329_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material454
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat330_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material455
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat331_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material456
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat332_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material457
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat333_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material458
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat334_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material459
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat335_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material460
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat336_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material461
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat337_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material462
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat338_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material463
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat339_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material464
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat340_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material465
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat341_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material466
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat342_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material467
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat343_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material468
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat344_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material469
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat345_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material470
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat346_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material471
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat347_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material472
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat348_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material473
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat349_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material474
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat350_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material475
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat351_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material476
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat352_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material477
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat353_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material478
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat354_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material479
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat355_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material480
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat356_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material481
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat357_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material482
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat358_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material483
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat359_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material484
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat360_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material485
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat361_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material486
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat362_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material487
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat363_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material488
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat364_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material489
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat365_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material490
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat366_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material491
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat367_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material492
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat368_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material493
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat369_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material494
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat370_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material495
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat371_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material496
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material497
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat372_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material498
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat373_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material499
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat374_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material500
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat375_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material501
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat376_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material502
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat377_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material503
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material504
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat378_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material505
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat379_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material506
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat380_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material507
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat381_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material508
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat382_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material509
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat383_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material510
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material511
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat384_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material512
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat385_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material513
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat386_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material514
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat387_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material515
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat388_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material516
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat389_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material517
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat390_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material518
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat391_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material519
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat392_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material520
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat393_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material521
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat394_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material522
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat395_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material523
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat396_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material524
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat397_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material525
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material526
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat398_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material527
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat399_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material528
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat400_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material529
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat401_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material530
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat402_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material531
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat403_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material532
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat404_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material533
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat405_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material534
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat406_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material535
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat407_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material536
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat408_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material537
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat409_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material538
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat410_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material539
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material540
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat411_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material542
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat412_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material543
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat413_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material545
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat414_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material546
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat415_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material547
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat416_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material548
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat417_diff.png
+Ks 0.8039 0.7922 0.5137
+Ke 0.6745 0.8392 0.9333
+Tr 0.9900
+sidedness both
+
+newmtl material549
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat418_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material550
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat419_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material551
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat420_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material552
+Ka 0.2000 0.2000 0.2000
+Kd 0.5608 0.7098 0.8902
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material553
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat421_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material554
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat422_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material555
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material556
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material557
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material559
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material560
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material561
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material562
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material563
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material564
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material565
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material567
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material568
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material569
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material570
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material571
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material572
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material573
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material574
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material575
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material576
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material577
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material578
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material579
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material580
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material581
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material582
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat423_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material583
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat424_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material584
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat425_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material585
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat426_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material586
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat427_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material587
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat428_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material588
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat429_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material589
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat430_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material590
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat431_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material591
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat432_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material592
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat433_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material593
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat434_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material594
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat435_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material595
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat436_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material596
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat437_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material597
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat438_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material598
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat439_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material599
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat440_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material600
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat441_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material601
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat442_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material602
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat443_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material603
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat444_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material604
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat445_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material605
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat446_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material606
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat447_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material607
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat448_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material608
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat449_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material609
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat450_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material610
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat451_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material611
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat452_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material612
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat453_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material613
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat454_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material614
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat455_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material615
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat456_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material616
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat457_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material617
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat458_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material618
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat459_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material619
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat460_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material620
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat461_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material621
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat462_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material622
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat463_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material623
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat464_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material624
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat465_diff.png
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material625
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material626
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material627
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material628
+Ka 0.2000 0.2000 0.2000
+Kd 0.6431 0.6431 0.8235
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+
+newmtl material631
+Ka 0.2000 0.2000 0.2000
+Kd 1.0000 1.0000 1.0000
+map_Kd .\proj_mat466_diff.jpg
+Ks 0.0000 0.0000 0.0000
+Ke 0.0000 0.0000 0.0000
+Tr 0.0000
+

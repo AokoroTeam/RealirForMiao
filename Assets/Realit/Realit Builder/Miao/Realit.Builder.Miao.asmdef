@@ -1,0 +1,25 @@
+{
+    "name": "Realit.Builder.Miao",
+    "rootNamespace": "Realit.Builder.Miao",
+    "references": [
+        "GUID:2e07817c25e9afe43a945bff0e50b567",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "RealitCore.dll",
+        "TriLibCore.dll",
+        "Newtonsoft.Json.dll",
+        "AokoroCore.dll",
+        "Sequencer.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "IS_BUILDER"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
