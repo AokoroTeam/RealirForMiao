@@ -61,7 +61,7 @@ namespace Realit.Builder.Miao
                         StopSequence();
                         throw;
                     }
-                })
+                })/*
                 .WaitUntil(() => CanBuild)
                 .Do(() =>
                 {
@@ -112,7 +112,7 @@ namespace Realit.Builder.Miao
                             MiaoBuilder.Log($"Copying template to {Output}...");
                             CopyDirectory(templateDir, Output, true);
 
-                            string path = Path.Combine(Output, "StreamingAssets", $"{Data.ProjectName}.rsz");
+                            string path = Path.Combine(Output, "StreamingAssets", $"embed.rsz");
                             WriteFile(path, compressedData);
                         }
                         else
@@ -128,7 +128,7 @@ namespace Realit.Builder.Miao
                         throw;
                     }
                    
-                })
+                })*/
                 .Build();
 
 
@@ -220,7 +220,7 @@ namespace Realit.Builder.Miao
                             xmlDoc.Load(fileStream);
 
                         MiaoMapper miao = ScriptableObject.CreateInstance<MiaoMapper>();
-                        //miao.PostProcess(xmlDoc, ctx);
+                        miao.PostProcess(xmlDoc, ctx);
                     }
                     else
                     {

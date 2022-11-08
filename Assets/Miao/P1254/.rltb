@@ -1,1 +1,16 @@
-{"ModelPath":"C:\\RealitSystem\\RealitForMiao\\Assets\\Miao\\P1254\\OBJ\\proj.obj","Appertures":[],"PlayerPosition":{"x":-66.453,"y":1.5098,"z":41.0324},"PlayerRotation":{"x":0.6373,"y":0.0578,"z":-0.7684}}
+{
+   "ModelPath":"D:\\Pro\\Aokoro\\RealitSystem\\RealirForMiao\\Assets\\Miao\\P1254\\OBJ\\proj.obj",
+   "Appertures":[
+      
+   ],
+   "PlayerPosition":{
+      "x":-66.453,
+      "y":1.5098,
+      "z":41.0324
+   },
+   "PlayerRotation":{
+      "x":0,
+      "y":0,
+      "z":-1
+   }
+}
