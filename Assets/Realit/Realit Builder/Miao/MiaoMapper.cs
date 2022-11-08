@@ -67,7 +67,7 @@ namespace Realit.Builder.Miao
                 List<int> list = kvp.Value;
                 if (list.Count > 0)
                 {
-                    //ModelDataBuilder.AddAperture(kvp.Key.gameObject, list.ToArray());
+                    ModelDataBuilder.AddAperture(kvp.Key.gameObject, list.ToArray());
                 }
             }
         }

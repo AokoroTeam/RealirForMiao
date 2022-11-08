@@ -4,6 +4,7 @@ using UnityEngine;
 using Newtonsoft.Json.Linq;
 using Realit.Scene;
 using Realit.Settings;
+using System;
 
 namespace Realit.Builder
 {
@@ -25,5 +26,10 @@ namespace Realit.Builder
         public JObject Serialize() => new(
             new JProperty("Project", ProjectName??="Project"),
             new JProperty("Settings", JObject.FromObject(RealitSettings.GlobalSettings)));
+
+        public static void SetProjectName(string projectName)
+        {
+            projectName = projectName.Trim();
+        }
     }
 }

@@ -54,6 +54,7 @@ namespace Realit.Builder.Miao
 
                         PlayerDataBuilder.SetPlayerRotation(Data.PlayerRotation);
                         PlayerDataBuilder.SetPlayerPosition(Data.PlayerPosition);
+                        ProjectDataBuilder.SetProjectName(Data.ProjectName);
                     }
                     catch
                     {
@@ -61,7 +62,7 @@ namespace Realit.Builder.Miao
                         StopSequence();
                         throw;
                     }
-                })/*
+                })
                 .WaitUntil(() => CanBuild)
                 .Do(() =>
                 {
@@ -109,10 +110,15 @@ namespace Realit.Builder.Miao
                         if (MiaoBuilder.Instance.TryGetArg("-embed"))
                         {
                             string templateDir = Path.Combine(Application.streamingAssetsPath, "ReaderTemplate/Web");
-                            MiaoBuilder.Log($"Copying template to {Output}...");
-                            CopyDirectory(templateDir, Output, true);
+                            string outputDir = string.IsNullOrEmpty(Data.ProjectName) ? "NewVisite" : Data.ProjectName;
 
-                            string path = Path.Combine(Output, "StreamingAssets", $"embed.rsz");
+                            MiaoBuilder.Log($"Copying template to {Output}...");
+                            string destination = Path.Combine(Output, outputDir);
+                            Directory.CreateDirectory(destination);
+
+                            CopyDirectory(templateDir, destination, true);
+
+                            string path = Path.Combine(destination, "StreamingAssets", $"embed.rsz");
                             WriteFile(path, compressedData);
                         }
                         else
@@ -128,7 +134,7 @@ namespace Realit.Builder.Miao
                         throw;
                     }
                    
-                })*/
+                })
                 .Build();
 
 
